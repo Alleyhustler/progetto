@@ -12,17 +12,37 @@
             <source src="entrance.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
+        <img id="image-button" src="images/follow.png" alt="Button" style="display:none;" />
     </div>
     <div class="content">
         <h1>Welcome to My Website</h1>
         <p>This is some overlay content.</p>
     </div>
     <script>
-        // Stop video when it ends
         const video = document.getElementById('background-video');
-        video.addEventListener('ended', () => {
-            video.pause();
-        });
+        const imageButton = document.getElementById('image-button');
+
+        // URL of the second video
+        const secondVideoSrc = 'follow.webm';
+
+        // Function to switch video sources
+        function switchToSecondVideo() {
+            video.src = secondVideoSrc; // Change the source to the second video
+            video.load(); // Load the new video
+            video.play(); // Start playing the second video
+
+            // Remove this function from the event listener to avoid duplicating it
+            video.removeEventListener('ended', switchToSecondVideo);
+            // Add event listener for the second video
+            video.addEventListener('ended', () => {
+                console.log('Second video ended'); // Log for debugging
+                video.pause(); // Ensure it stops playing
+                imageButton.style.display = 'block'; // Show the button after the second video ends
+            });
+        }
+
+        // Event listener for when the first video ends
+        video.addEventListener('ended', switchToSecondVideo);
     </script>
 </body>
 </html>

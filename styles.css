@@ -43,3 +43,21 @@ video {
         font-size: 14px; /* Adjust text size for smaller screens */
     }
 }
+
+/* Image button styles */
+#image-button {
+    position: absolute; /* Position it absolutely */
+    width: 460px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 2; /* Ensure the button is above the video */
+    display: none; /* Initially hide the button */
+}
+
+
+#image-button {
+    position: absolute; /* Maintain absolute positioning */
+    top: 78%; /* Adjust this value (percentage or pixels) */
+    left: 82.7%; /* Adjust this value (percentage or pixels) */
+    transform: translate(-50%, -50%); /* Center it based on the new top/left values */
+}
