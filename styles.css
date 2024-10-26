@@ -57,7 +57,7 @@ video {
 
 #image-button {
     position: absolute; /* Maintain absolute positioning */
-    top: 78%; /* Adjust this value (percentage or pixels) */
+    top: 78.5%; /* Adjust this value (percentage or pixels) */
     left: 82.7%; /* Adjust this value (percentage or pixels) */
     transform: translate(-50%, -50%); /* Center it based on the new top/left values */
 }
