@@ -34,9 +34,10 @@ video {
     color: white; /* Text color for visibility */
     text-align: center; /* Center the text */
     padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better visibility */
 }
 
-/* Optional: Additional styles for responsiveness and aesthetics */
+/* Optional: Responsive adjustments */
 @media (max-width: 768px) {
     .content {
         font-size: 14px; /* Adjust text size for smaller screens */
