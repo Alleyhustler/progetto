@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Use the same CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS to ensure full-page background image */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/end.jpg'); /* Replace with your image path */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            z-index: -1; /* Send it to the back */
+        }
+
+        /* Optional: Add some overlay content */
+        .content {
+            position: relative;
+            z-index: 1; /* Ensure content is above the background image */
+            color: white; /* Text color for visibility */
+            text-align: center; /* Center the text */
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="background-image"></div> <!-- Full-page background image -->
     <div class="content">
         <h1>Welcome to the Moon Page</h1>
-        <p>This page contains information about the moon.</p>
-        <a href="index.html">Go back to the main page</a> <!-- Link to go back -->
+        <p>This page features a full-page background image.</p>
     </div>
 </body>
 </html>
